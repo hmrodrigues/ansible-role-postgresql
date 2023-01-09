@@ -12,6 +12,9 @@
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
+- include_tasks: setup-Alpine.yml
+  when: ansible_os_family == 'Alpine'
+
 - include_tasks: initialize.yml
 - include_tasks: configure.yml
 
